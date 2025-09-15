@@ -11,8 +11,15 @@ const port = 3000;
 // 存储上传文件信息的 JSON 文件
 const dataFile = path.join(__dirname, 'data.json');
 
-// 确保数据文件存在
+// 确保必要的目录和文件存在
 async function ensureDataFile() {
+  // 确保 uploads 目录存在
+  const uploadsDir = path.join(__dirname, 'uploads');
+  if (!await fs.pathExists(uploadsDir)) {
+    await fs.ensureDir(uploadsDir);
+  }
+  
+  // 确保数据文件存在
   if (!await fs.pathExists(dataFile)) {
     await fs.writeJson(dataFile, { files: [] });
   }
