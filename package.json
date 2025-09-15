@@ -1,0 +1,22 @@
+{
+  "name": "html-hosting",
+  "version": "1.0.0",
+  "description": "HTML 文件上传和托管服务，支持透明 CORS 代理",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.0",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["html", "hosting", "cors", "proxy", "upload"],
+  "author": "",
+  "license": "MIT"
+}
